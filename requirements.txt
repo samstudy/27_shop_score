@@ -1,4 +1,5 @@
 Flask==0.11.1
+flask_sqlalchemy
 Jinja2==2.9.6
 SQLAlchemy==1.1.10
 gunicorn==19.7.1
