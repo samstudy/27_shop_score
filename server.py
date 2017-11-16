@@ -6,8 +6,8 @@ from model import app, Orders
 
 def count_waiting_time(order):
     if order:
-        return ((datetime.now().hour*60 + datetime.now().minute) - 
-                (order.created.hour+order.created.minute))
+        return datetime.now().hour*60 + datetime.now().minute -\
+               order.created.hour+order.created.minute
     else:
         return 0
 
