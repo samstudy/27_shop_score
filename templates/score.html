@@ -3,6 +3,7 @@
   <head>
     <title>Shop Score</title>
     <meta charset="utf-8">
+    <meta name="robots" content="noindex,nofollow">
     <meta http-equiv="refresh" content="10">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -11,14 +12,14 @@
     <div class="container col-lg-12">
       <div class="jumbotron ">
         <h1 class="text-center">Время неотработанных заявок</h1>
-        <h1 class="orderTime text-center">{{unconfimed_order}}</h1>
+        <h1 class="orderTime text-center">{{unconf_order_waiting_time}}</h1>
         <h1 class="text-center">минут</h1>
       </div>
     </div>
     <div class="container">
       <div class="well well-sm text-center col-lg-12">
         <h4>Количество заказов обработанных за день 
-          <mark>{{count_today_confirmed_orders}}</mark>
+          {{count_today_confirmed_orders}}
         </h4>
       </div>
     </div>
@@ -33,6 +34,7 @@
       
       if (waitingTime <= 7){
        score.style.background = 'green';
+       score.style.color = 'white'
       } else if (waitingTime <= 30){
        score.style.background = 'yellow';
       } else {
